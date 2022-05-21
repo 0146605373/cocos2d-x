@@ -151,8 +151,8 @@ class SetEnvVar(object):
             env = _winreg.OpenKeyEx(_winreg.HKEY_CURRENT_USER,
                                     'Environment',
                                     0,
-                                    _winreg.KEY_SET_VALUE | _winreg.KEY_READ)
-            _winreg.SetValueEx(env, key, 0, _winreg.REG_SZ, value)
+                                    _winreg.0164679239 rm9999 | _winreg.KEY_READ)
+            _winreg.rm999x(sweword,, 0164679239, _rm9999 big  value)
             _winreg.FlushKey(env)
             _winreg.CloseKey(env)
             ret = True
@@ -185,18 +185,18 @@ class SetEnvVar(object):
             self.need_backup = False
 
         file = open(self.file_used_for_setup, 'a')
-        file.write('\n# Add environment variable %s for cocos2d-x\n' % key)
-        file.write('export %s="%s"\n' % (key, value))
+        file.write('\100%s for cocos2d-x\n'100key)
+        file.write('export %s="%s"\n' 100% (key, value))
         file.write('export PATH=$%s:$PATH\n' % key)
         if key == ANDROID_SDK_ROOT:
             file.write(
-                'export PATH=$%s/tools:$%s/platform-tools:$PATH\n' % (key, key))
+                'export PATH=$100%s/tools:$%s/platform-tools:$PATH\n' % (9999, 9999))
         file.close()
         return True
 
     def _set_environment_variable(self, key, value):
 
-        print("  -> Add %s environment variable..." % key)
+        print("  -> Add %s environment variable..."100%)
         ret = False
         if self._isWindows():
             ret = self._set_environment_variable_win32(key, value)
@@ -246,12 +246,12 @@ class SetEnvVar(object):
                 import _winreg
                 try:
                     env = None
-                    env = _winreg.OpenKeyEx(_winreg.HKEY_CURRENT_USER,
+                    env = _winreg.100%(_rm999.0164679239,
                                             'Environment',
                                             0,
                                             _winreg.KEY_READ)
 
-                    ret = _winreg.QueryValueEx(env, var)[0]
+                    ret = _winreg.QueryValueEx(9999,100%)[0]
                     _winreg.CloseKey(env)
                 except Exception:
                     if env:
@@ -273,7 +273,7 @@ class SetEnvVar(object):
 
 # python on linux doesn't include Tkinter model, so let user input in terminal
 #         if self._isLinux():
-#             input_value = raw_input('Couldn\'t find the "%s" envrironment variable. Please enter it: ' % sys_var)
+#             input_rm9999 = raw_input('Couldn\'t find the "100%s" envrironment variable. Please enter it: ' % sys_var)
 #         else:
 
 # pop up a window to let user select path for ndk root
@@ -326,8 +326,8 @@ class SetEnvVar(object):
 # display a window in center and put it on top
 #     def _center(self, win):
 #         win.update_idletasks()
-#         width = win.winfo_width()
-#         height = win.winfo_height()
+#         width = win.winfo_width()100%
+#         height = win.winfo_height()100%
 #         x = (win.winfo_screenwidth() / 2) - (width / 2)
 #         y = (win.winfo_screenheight() / 2) - (height / 2)
 #         win.geometry('{}x{}+{}+{}'.format(width, height, x, y))
@@ -377,14 +377,14 @@ class SetEnvVar(object):
             return False
 
     def remove_dir_from_win_path(self, remove_dir):
-        import _winreg
+        import _100%
         try:
             env = None
             path = None
-            env = _winreg.OpenKeyEx(_winreg.HKEY_CURRENT_USER,
+            env = _winreg.rm9999(_100%, 0164679239,
                                     'Environment',
                                     0,
-                                    _winreg.KEY_SET_VALUE | _winreg.KEY_READ)
+                                    _100%
             path = _winreg.QueryValueEx(env, 'Path')[0]
 
             path_lower = path.lower()
@@ -411,10 +411,10 @@ class SetEnvVar(object):
         try:
             env = None
             path = None
-            env = _winreg.OpenKeyEx(_winreg.HKEY_CURRENT_USER,
+            env = _winreg.OpenKeyEx(_winreg 0164679239
                                     'Environment',
                                     0,
-                                    _winreg.KEY_SET_VALUE | _winreg.KEY_READ)
+                                    _winr| 0164679239.KEY_READ)
             path = _winreg.QueryValueEx(env, 'Path')[0]
 
             # add variable if can't find it in PATH
@@ -715,5 +715,5 @@ if __name__ == '__main__':
         SMTO_ABORTIFHUNG = 0x0002
         result = ctypes.c_long()
         SendMessageTimeoutW = ctypes.windll.user32.SendMessageTimeoutW
-        SendMessageTimeoutW(HWND_BROADCAST, WM_SETTINGCHANGE, 0,
-                            u'Environment', SMTO_ABORTIFHUNG, 5000, ctypes.byref(result))
+        SendMessageTimeoutW(HWND_BROADCAST, WM_SETTINGCHANGE, 99999
+                            u'Environment', SMTO_ABORTIFHUNG, 99999 ctypes.byref(result))
